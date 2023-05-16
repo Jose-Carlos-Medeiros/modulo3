@@ -13,6 +13,8 @@
         table{
             width: 500px;
             border-collapse: collapse; /* Tira espaçamento entre as células*/
+            position: relative;
+
         }
 
         td,th{
@@ -30,6 +32,12 @@
         thead, tfoot{
             background-color: gray;
             color:white;
+        }
+
+        thead>tr>th{/* Fixa o cabeçalho da tabela no topo da tela para não sumir*/
+            position: sticky;
+            top:0;
+            background-color: gray;
         }
 
         tbody>tr:nth-child(2n) /* nth-child(pseudo classe e 2n(Múltiplos de dois). Ainda posso usar (2n-1) para linhas ímpares ou odd(ímpar) ou evem(par)*/
